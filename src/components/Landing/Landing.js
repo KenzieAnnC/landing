@@ -7,10 +7,6 @@ class Landing extends Component {
     state = {
         quotes
     };
-
-       
-        // var currentQuote =quotes[ Math.floor(Math.random() * this.state.length)];
-        // return currentQuote
         
     render() {
         return (
@@ -21,7 +17,7 @@ class Landing extends Component {
                         <hr className="my-2" />
                         <p>{quotes[Math.floor(Math.random()*quotes.length)]}</p>
                         <p className="lead">
-                            <Button color="primary">Learn More</Button>
+                            <Button color="primary" handleClick = "">wow. that was terrible. show me another</Button>
                         </p>
                     </div>
                 </Jumbotron>
