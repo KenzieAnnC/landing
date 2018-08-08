@@ -1,10 +1,9 @@
 .App {
   text-align: center;
-  widows: 960px;
-  float: left;
-  content: "";
-  display: block;
-  clear: both;
+}
+
+.cont {
+  width: 960px;
 }
 
 .App-logo {
