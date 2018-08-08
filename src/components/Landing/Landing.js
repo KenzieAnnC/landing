@@ -8,10 +8,13 @@ class Landing extends Component {
         quotes,
         quote: "",
     };
-        
+    componentDidMount() {
+        this.getRandQuote();
+    };
+    
     getRandQuote = () => {
         this.setState({
-            quote: quotes[Math.floor(Math.random()*quotes.length)],
+            quote: quotes[Math.floor(Math.random() * quotes.length)],
         })
     };
     render() {
@@ -19,11 +22,11 @@ class Landing extends Component {
             <div>
                 <Jumbotron>
                     <div className="jumbo">
-                        
+
                         <hr className="my-2" />
                         <p>{this.state.quote}</p>
                         <p className="lead">
-                            <Button color="primary" onClick ={this.getRandQuote}>wow. that was terrible. show me another</Button>
+                            <Button color="primary" onClick={this.getRandQuote}>wow. that was terrible. show me another</Button>
                         </p>
                     </div>
                 </Jumbotron>
