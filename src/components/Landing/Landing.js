@@ -5,9 +5,15 @@ import quotes from "../../quotes.json";
 
 class Landing extends Component {
     state = {
-        quotes
+        quotes,
+        quote: "",
     };
         
+    getRandQuote = () => {
+        this.setState({
+            quote: quotes[Math.floor(Math.random()*quotes.length)],
+        })
+    };
     render() {
         return (
             <div>
@@ -15,9 +21,9 @@ class Landing extends Component {
                     <div className="jumbo">
                         
                         <hr className="my-2" />
-                        <p>{quotes[Math.floor(Math.random()*quotes.length)]}</p>
+                        <p>{this.state.quote}</p>
                         <p className="lead">
-                            <Button color="primary" handleClick = "">wow. that was terrible. show me another</Button>
+                            <Button color="primary" onClick ={this.getRandQuote}>wow. that was terrible. show me another</Button>
                         </p>
                     </div>
                 </Jumbotron>
